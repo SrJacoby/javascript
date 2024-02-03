@@ -4,6 +4,7 @@ function verificar(){
     var fano = document.getElementById('txtano')
     var res = document.getElementById('res')
 
+
     if(fano.value.length == 0 || fano.value > ano) {
         alert('[ERRO] Verifique os dados e tente novamente!')
     } else {
@@ -24,9 +25,7 @@ function verificar(){
             } else {
                 img.setAttribute('src', 'idoso-h.png')
             }
-        } else if (fsex[1].checked){
-            genero = 'Mulher'
-            if (fsex[1].checked) {
+        } else if (fsex[1].checked) {
                 genero = 'Mulher'
                 if (idade >= 0 && idade < 13){
                     img.setAttribute('src', 'crianca-m.png')
@@ -40,7 +39,9 @@ function verificar(){
         }
         res.style.textAlign = 'center'
         res.innerHTML = `Detectamos ${genero} com ${idade} anos.`
-        res.appendChild(img)
     }
+    res.appendChild(img);
 }
-}
+
+
+
